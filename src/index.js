@@ -21,12 +21,12 @@ const queryClient = new QueryClient({
 ReactDOM.render(
   <QueryClientProvider client={queryClient}>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <React.StrictMode>
-        <BrowserRouter>
+      <BrowserRouter>
+        <React.StrictMode>
+          <CssBaseline />
           <App />
-        </BrowserRouter>
-      </React.StrictMode>
+        </React.StrictMode>
+      </BrowserRouter>
     </ThemeProvider>
   </QueryClientProvider>,
 

@@ -22,35 +22,89 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: ['"Tinos"', '"Times New Roman"', '"Times"', 'serif'].join(','),
+    color: PrimaryDark,
     h1: {
       fontSize: '1.875rem',
       lineHeight: 1.2,
-      fontFamily: 'GFS Didot',
-      letterSpacing: '0.05rem',
-      color: PrimaryDark
+      letterSpacing: '0.05rem'
+    },
+    h2: {
+      fontSize: '1.5rem',
+      lineHeight: 1.2,
+      letterSpacing: '-0.06rem'
+    },
+    h3: {
+      fontSize: '1.313rem',
+      lineHeight: 1.2,
+      letterSpacing: '-0.06rem'
+    },
+    h4: {
+      fontSize: '1.125rem',
+      lineHeight: 1.4,
+      fontWeight: 300
+    },
+    body1: {
+      fontSize: '1rem',
+      lineHeight: 1.7,
+      fontWeight: 300
+    },
+    body2: {
+      fontSize: '0.75rem'
     }
   },
-  overrides: {
+  components: {
     MuiCssBaseline: {
-      '@global': {
-        a: {
-          textDecoration: 'none',
-          color: 'inherit'
-        },
-        body: {
-          margin: 0,
-          boxSizing: 'border-box'
+      styleOverrides: {
+        '@global': {
+          a: {
+            textDecoration: 'none',
+            color: 'inherit'
+          },
+          body: {
+            margin: 0,
+            boxSizing: 'border-box'
+          }
         }
       }
     },
     MuiSvgIcon: {
-      root: {
-        fill: PrimaryDark,
-        minWidth: '70px',
-        minHeigth: '70px'
-      },
-      colorPrimary: {
-        fill: PrimaryDark
+      styleOverrides: {
+        root: {
+          fill: PrimaryDark,
+          minWidth: '70px',
+          minHeigth: '70px'
+        },
+        colorPrimary: {
+          fill: PrimaryDark
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textAlign: 'center',
+          borderRadius: '4px',
+          fontSize: '16px',
+          color: 'SecondaryDark',
+          minWidth: 64
+        },
+        outlined: {
+          color: SecondaryDark,
+          padding: '10px 15px',
+          minWidth: 64,
+          borderColor: Primary,
+          backgroundColor: SecondaryLight,
+          '&:hover': {
+            '@media (hover: none)': {
+              backgroundColor: Primary
+            }
+          }
+        },
+        text: {
+          '&:hover': {
+            textDecoration: 'underline'
+          }
+        }
       }
     }
   }
