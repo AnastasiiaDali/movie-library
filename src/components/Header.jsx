@@ -6,11 +6,9 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/system';
-import { SecondaryLight } from 'theme.js';
-// import theme from 'theme';
+import { SecondaryLight, Primary } from 'theme.js';
 
 const StyledToolbar = styled(Toolbar)({
-  minHeight: '90px',
   backgroundColor: SecondaryLight,
   diplay: 'flex',
   justifyContent: 'flex-end',
@@ -20,7 +18,8 @@ const StyledToolbar = styled(Toolbar)({
 const Logo = styled(Typography)({
   position: 'absolute',
   left: '50%',
-  transform: 'translateX(-50%)'
+  transform: 'translateX(-50%)',
+  color: Primary
 });
 
 function HideOnScroll(props) {
@@ -42,13 +41,12 @@ export default function Header() {
     <>
       <HideOnScroll>
         <AppBar>
-          <StyledToolbar>
+          <StyledToolbar style={{ minHeight: '90px' }}>
             <Logo variant="h1">MovieBook</Logo>
             <MenuIcon color="primary" />
           </StyledToolbar>
         </AppBar>
       </HideOnScroll>
-      <Toolbar />
     </>
   );
 }
