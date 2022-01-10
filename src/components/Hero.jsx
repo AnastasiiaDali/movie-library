@@ -6,8 +6,8 @@ import { styled } from '@mui/system';
 const StyledBox = styled(Box)({
   background: `url(${HeroImg}) center center/cover no-repeat`,
   filter: 'brightness(40%)',
-  minWidth: '100vw',
-  height: '100vh',
+  minWidth: '100%',
+  minHeight: '100%',
   position: 'fixed',
   top: '0',
   left: '0',

@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from 'components/Hero';
-import Introduction from 'components/Introduction';
+import Introduction from 'components/Introduction/index';
 // import Container from '@mui/material/Container';
 // import { styled } from '@mui/system';
 
