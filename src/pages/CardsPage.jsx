@@ -67,7 +67,7 @@ const TextWrapper = styled(animated(Box))({
   textAlign: 'center',
   height: '100%',
   width: '100%',
-  background: '#fff',
+  background: '#C0C0C0',
   fontSize: 16,
   overflow: 'hidden'
 });
