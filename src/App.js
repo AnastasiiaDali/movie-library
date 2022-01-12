@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import HomePage from 'pages/HomePage';
-import CardsPage from 'pages/CardsPage';
+
 import Header from 'components/Header';
-import SingleShowPage from 'pages/SingleShowPage/SingleShowPage';
 import './fonts/stylesheet.css';
 
-// TODO: make code splitting based on routing
-// TODO: use sx, remove all inline styling
-// TODO: add proptypes
+const HomePage = lazy(() => import('pages/HomePage'));
+const CardsPage = lazy(() => import('pages/CardsPage'));
+const SingleShowPage = lazy(() => import('pages/SingleShowPage/SingleShowPage'));
 
 function App() {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/shows" element={<CardsPage />} />
-        <Route path="/shows/:id" element={<SingleShowPage />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/shows" element={<CardsPage />} />
+          <Route path="/shows/:id" element={<SingleShowPage />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }
