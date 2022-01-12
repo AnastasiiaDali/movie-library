@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -6,20 +7,25 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/system';
-import { SecondaryLight, Primary } from 'theme.js';
+import { Primary, SecondaryDark } from 'theme.js';
 
 const StyledToolbar = styled(Toolbar)({
-  backgroundColor: SecondaryLight,
+  backgroundColor: SecondaryDark,
   diplay: 'flex',
   justifyContent: 'flex-end',
-  padding: '24px'
+  padding: '24px',
+  minWidth: '400px',
+  width: '100%',
+  maxWidth: '1280px',
+  margin: '0 auto'
 });
 
 const Logo = styled(Typography)({
   position: 'absolute',
   left: '50%',
   transform: 'translateX(-50%)',
-  color: Primary
+  color: Primary,
+  fontWeight: 'bold'
 });
 
 function HideOnScroll(props) {
@@ -40,9 +46,11 @@ export default function Header() {
   return (
     <>
       <HideOnScroll>
-        <AppBar>
+        <AppBar sx={{ backgroundColor: SecondaryDark }}>
           <StyledToolbar style={{ minHeight: '90px' }}>
-            <Logo variant="h1">MovieBook</Logo>
+            <Logo variant="h1" component={Link} to={'/'}>
+              FilmLab
+            </Logo>
             <MenuIcon color="primary" />
           </StyledToolbar>
         </AppBar>

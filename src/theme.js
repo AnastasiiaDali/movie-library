@@ -1,23 +1,19 @@
 import { createTheme } from '@mui/material/styles';
 
-export const Primary = '#008080';
-export const PrimaryDark = '#004d4d';
-export const PrimaryLight = '#009999';
-export const Secondary = '#CCC';
-export const SecondaryDark = '#1a1a1a';
-export const SecondaryLight = ' #f2f2f2';
+export const Primary = '#E50914';
+export const PrimaryDark = '#831010';
+export const Secondary = '#564d4d';
+export const SecondaryDark = '#000000';
 
 const theme = createTheme({
   palette: {
     primary: {
       main: Primary,
-      light: PrimaryLight,
       dark: PrimaryDark
     },
     secondary: {
       main: Secondary,
-      light: SecondaryDark,
-      dark: SecondaryLight
+      dark: SecondaryDark
     }
   },
   typography: {
@@ -70,12 +66,11 @@ const theme = createTheme({
     MuiSvgIcon: {
       styleOverrides: {
         root: {
-          fill: PrimaryDark,
-          minWidth: '70px',
-          minHeigth: '70px'
+          fill: Primary,
+          fontSize: '40px'
         },
         colorPrimary: {
-          fill: PrimaryDark
+          fill: Primary
         }
       }
     },
@@ -93,7 +88,7 @@ const theme = createTheme({
           padding: '10px 15px',
           minWidth: 64,
           borderColor: Primary,
-          backgroundColor: SecondaryLight,
+          backgroundColor: Secondary,
           '&:hover': {
             '@media (hover: none)': {
               backgroundColor: Primary

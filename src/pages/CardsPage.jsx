@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useShowsQuery } from 'hooks/useShowsQuery';
+import { useNavigate } from 'react-router-dom';
 import { animated, useSprings } from 'react-spring';
 import { styled } from '@mui/system';
 import Typography from '@mui/material/Typography';
@@ -10,7 +11,9 @@ const StyledContainer = styled(Box)({
   marginTop: '90px',
   width: '100vw',
   minWidth: 288,
-  backgroundColor: '#f2f2f2',
+  backgroundColor: 'rgba(0, 0, 0, 0.9)',
+  position: 'absolute',
+  zIndex: '-10',
   minHeight: '100vh',
   padding: '48px 0 12px'
 });
@@ -53,8 +56,9 @@ const TitleWrapper = styled(animated(Box))({
   display: 'flex',
   cursor: 'pointer',
   height: '100%',
-  background: 'rgba(0,0,0,0.6)',
-  fontSize: 24
+  background: 'rgba(0,0,0,0.4)',
+  fontSize: 24,
+  fontWeight: 'bold'
 });
 
 const TextWrapper = styled(animated(Box))({
@@ -75,6 +79,7 @@ export default function CardsPage() {
   const [index, setIndex] = useState(null);
   const [isDelayed, setIsDelayed] = useState(true);
   const { data: shows } = useShowsQuery();
+  const navigate = useNavigate();
 
   const springs = useSprings(
     shows?.length || 0,
@@ -94,15 +99,20 @@ export default function CardsPage() {
       }
     }))
   );
+  const handleRouting = (url) => {
+    navigate(`/shows/${url}`);
+  };
 
   return (
     <StyledContainer>
-      <Typography variant="h2" textAlign="center" paragraph>
-        Find Information About All of Your Favorite Shows in One Place
-      </Typography>
-      <Typography textAlign="center" variant="h4" paragraph>
-        Click on she show to learn more
-      </Typography>
+      <Box sx={{ padding: '0 16px' }}>
+        <Typography variant="h2" textAlign="center" paragraph color="#fff">
+          Find Information About All of Your Favorite Shows in One Place
+        </Typography>
+        <Typography textAlign="center" variant="h4" paragraph color="#fff">
+          Click on she show to learn more
+        </Typography>
+      </Box>
       <StyledGridBox>
         {springs
           .slice(0, 45)
@@ -129,7 +139,11 @@ export default function CardsPage() {
                   <Typography paragraph variant="h4">
                     {shows[i].genres.join(', ')}
                   </Typography>
-                  <Button variant="text" width="100%" sx={{ margin: '32px' }}>
+                  <Button
+                    onClick={() => handleRouting(shows[i].id)}
+                    variant="contained"
+                    width="100%"
+                    sx={{ margin: '32px' }}>
                     Click here to info
                   </Button>
                 </AnimatedBox>

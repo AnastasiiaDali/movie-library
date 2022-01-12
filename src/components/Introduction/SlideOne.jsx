@@ -1,5 +1,4 @@
 import React from 'react';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Fade from 'react-reveal/Fade';
 
@@ -14,7 +13,7 @@ const StyledSlideBox = styled(Box)({
   paddingTop: '90px'
 });
 
-const StyledHeroTypography = styled(Typography)({
+const StyledHeroTypography = styled(Box)({
   width: '100%',
   padding: ' 0 16px',
   minHeight: '100vh',

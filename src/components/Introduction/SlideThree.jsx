@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -14,7 +16,7 @@ const StyledSlideBox = styled(Box)({
   paddingTop: '90px'
 });
 const StyledWrapper = styled(Box)(({ theme }) => ({
-  background: 'linear-gradient(rgba(242, 242, 242, 0.7), rgba(242, 242, 242, 0.9))',
+  background: 'linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.9))',
   minHeight: 'calc(100vh - 90px)',
   display: 'grid',
   justifyItems: 'center',
@@ -25,7 +27,7 @@ const StyledWrapper = styled(Box)(({ theme }) => ({
   }
 }));
 
-const StyledSliderText = styled(Typography)(({ theme }) => ({
+const StyledSliderText = styled(Box)(({ theme }) => ({
   width: '60vw',
   display: 'flex',
   flexDirection: 'column',
@@ -61,16 +63,18 @@ const SlideThree = () => {
         <Box />
         <StyledSliderText>
           <Fade top>
-            <Typography variant="h1" paragraph align="center">
+            <Typography variant="h1" paragraph align="center" color="#fff">
               Time to Watch Best Shows
             </Typography>
-            <Typography>
+            <Typography color="#fff">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum mollis
               erat in porta. Nunc mi mi, sagittis eu vulputate in, dapibus et leo. Nunc vitae tempus
               nunc. Nulla eget dui imperdiet, tempus lectus in, hendrerit nibh. Phasellus malesuada
               ullamcorper sapien. Quisque gravida nec lacus id tincidunt. Nam sed magna est.
             </Typography>
-            <StyledButton>Discover more ...</StyledButton>
+            <StyledButton component={Link} to={'/shows'}>
+              Discover more ...
+            </StyledButton>
           </Fade>
         </StyledSliderText>
         <StyledBoxImg />

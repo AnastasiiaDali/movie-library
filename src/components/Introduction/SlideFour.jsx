@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -19,7 +20,7 @@ const StyledSlideBox = styled(Box)({
   paddingTop: '90px'
 });
 const StyledWrapper = styled(Box)(({ theme }) => ({
-  background: 'linear-gradient(rgba(242, 242, 242, 0.7), rgba(242, 242, 242, 0.9))',
+  background: 'linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.9))',
   minHeight: 'calc(100vh - 90px)',
   display: 'grid',
   justifyItems: 'center',
@@ -31,7 +32,7 @@ const StyledWrapper = styled(Box)(({ theme }) => ({
   }
 }));
 
-const StyledSliderText = styled(Typography)(({ theme }) => ({
+const StyledSliderText = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -68,11 +69,18 @@ const SlideFour = () => {
         <StyledImgBox />
         <StyledSliderText>
           <Fade top>
-            <Typography variant="h1" paragraph>
+            <Typography variant="h1" paragraph color="#fff">
               Most Popular This week
             </Typography>
-            <Typography>{`${matches ? text : text.substring(0, 400) + '...'}`}</Typography>
-            <Button marginTop="32px" size="large" variant="text">
+            <Typography color="#fff">{`${
+              matches ? text : text.substring(0, 400) + '...'
+            }`}</Typography>
+            <Button
+              sx={{ marginTop: '32px' }}
+              size="large"
+              variant="text"
+              component={Link}
+              to={'/shows'}>
               Discover more ...
             </Button>
           </Fade>
