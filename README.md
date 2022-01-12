@@ -21,5 +21,3 @@ This project is using:
 - [React Query](https://react-query.tanstack.com/)
 
 This project is using data from https://api.tvmaze.com
-
-## Integration of the Create React App folder sctructure
