@@ -1,7 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Fade from 'react-reveal/Fade';
-
 import { styled } from '@mui/system';
 import theme from 'theme';
 

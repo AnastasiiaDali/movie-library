@@ -1,8 +1,8 @@
 import React from 'react';
-import SlideOne from 'components/Introduction/SlideOne';
-import SlideTwo from 'components/Introduction/SlideTwo';
-import SlideThree from 'components/Introduction/SlideThree';
-import SlideFour from 'components/Introduction/SlideFour';
+import SlideOne from 'pages/HomePage/Introduction/SlideOne';
+import SlideTwo from 'pages/HomePage/Introduction/SlideTwo';
+import SlideThree from 'pages/HomePage/Introduction/SlideThree';
+import SlideFour from 'pages/HomePage/Introduction/SlideFour';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 

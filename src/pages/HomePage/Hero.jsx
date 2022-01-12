@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import HeroImg from '../images/HeroImg.webp';
+import HeroImg from '../../images/HeroImg.webp';
 import { styled } from '@mui/system';
 
 const StyledBox = styled(Box)({

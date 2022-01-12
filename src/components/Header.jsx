@@ -44,17 +44,15 @@ function HideOnScroll(props) {
 
 export default function Header() {
   return (
-    <>
-      <HideOnScroll>
-        <AppBar sx={{ backgroundColor: SecondaryDark }}>
-          <StyledToolbar style={{ minHeight: '90px' }}>
-            <Logo variant="h1" component={Link} to={'/'}>
-              FilmLab
-            </Logo>
-            <MenuIcon color="primary" />
-          </StyledToolbar>
-        </AppBar>
-      </HideOnScroll>
-    </>
+    <HideOnScroll>
+      <AppBar sx={{ backgroundColor: SecondaryDark }}>
+        <StyledToolbar style={{ minHeight: '90px' }}>
+          <Logo variant="h1" component={Link} to={'/'}>
+            FilmLab
+          </Logo>
+          <MenuIcon color="primary" />
+        </StyledToolbar>
+      </AppBar>
+    </HideOnScroll>
   );
 }
