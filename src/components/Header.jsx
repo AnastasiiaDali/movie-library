@@ -7,7 +7,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/system';
-import { Primary, SecondaryDark } from 'theme.js';
+import { Primary, SecondaryDark } from 'theme';
 
 const StyledToolbar = styled(Toolbar)({
   backgroundColor: SecondaryDark,
