@@ -50,7 +50,9 @@ export default function Header() {
           <Logo variant="h1" component={Link} to={'/'}>
             FilmLab
           </Logo>
-          <MenuIcon color="primary" />
+          <Link to={'/shows'}>
+            <MenuIcon color="primary" />
+          </Link>
         </StyledToolbar>
       </AppBar>
     </HideOnScroll>
