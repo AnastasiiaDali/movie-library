@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/logo192.png"></img>
+  <img src="./public/movie.jpeg"></img>
 </div>
 
 <h1 align="center">Film Library App</h1>
