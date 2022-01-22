@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/movie.jpeg"></img>
+  <img width="60px" src="./public/movie.jpeg"></img>
 </div>
 
 <h1 align="center">Film Library App</h1>
@@ -21,3 +21,5 @@ This project is using:
 - [React Query](https://react-query.tanstack.com/)
 
 This project is using data from https://api.tvmaze.com
+
+<p align="center">To launch this project, go to https://filmlab.netlify.app/</p>
