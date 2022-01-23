@@ -21,19 +21,19 @@ export default function SingleShowPage() {
           />
           <DescBox>
             <Fade top>
-              <Typography variant="h1" sx={{ marginBottom: '40px' }}>
+              <Typography variant="h3" sx={{ marginBottom: '40px' }}>
                 {show?.name}
               </Typography>
-              <Typography variant="h3" paragraph>
+              <Typography variant="h6" paragraph>
                 {`Lunguage: ${show?.language}`}
               </Typography>
-              <Typography variant="h3" paragraph>
+              <Typography variant="h6" paragraph>
                 {`Genres: ${show?.genres.join(', ')}`}
               </Typography>
-              <Typography variant="h3" paragraph>
+              <Typography variant="h6" paragraph>
                 {`Premiered: ${show?.premiered}`}
               </Typography>
-              <Typography variant="h3" paragraph>
+              <Typography variant="h6" paragraph>
                 {`Average Rating: ${show?.rating.average}`}
               </Typography>
               <Box sx={{ fontSize: '18px', textAlign: 'justify' }}>

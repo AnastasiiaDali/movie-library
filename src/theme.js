@@ -2,8 +2,20 @@ import { createTheme } from '@mui/material/styles';
 
 export const Primary = '#E50914';
 export const PrimaryDark = '#831010';
-export const Secondary = '#564d4d';
+export const Secondary = '#e50914';
 export const SecondaryDark = '#000000';
+
+const breakPoints = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 450,
+      md: 600,
+      lg: 900,
+      xl: 1200
+    }
+  }
+});
 
 const theme = createTheme({
   palette: {
@@ -19,33 +31,13 @@ const theme = createTheme({
   typography: {
     fontFamily: ['"Tinos"', '"Times New Roman"', '"Times"', 'serif'].join(','),
     color: PrimaryDark,
-    h1: {
-      fontSize: '1.875rem',
-      lineHeight: 1.2,
-      letterSpacing: '0.05rem'
-    },
-    h2: {
-      fontSize: '1.5rem',
-      lineHeight: 1.2,
-      letterSpacing: '-0.06rem'
-    },
-    h3: {
-      fontSize: '1.313rem',
-      lineHeight: 1.2,
-      letterSpacing: '-0.06rem'
-    },
     h4: {
-      fontSize: '1.125rem',
+      fontSize: '1.8rem',
       lineHeight: 1.4,
-      fontWeight: 300
-    },
-    body1: {
-      fontSize: '1rem',
-      lineHeight: 1.7,
-      fontWeight: 300
-    },
-    body2: {
-      fontSize: '0.75rem'
+      fontWeight: 300,
+      [breakPoints.breakpoints.down('sm')]: {
+        fontSize: '1.3rem'
+      }
     }
   },
   components: {

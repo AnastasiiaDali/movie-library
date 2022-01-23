@@ -2,10 +2,10 @@ import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
 
 export const StyledContainer = styled(Box)(({ theme }) => ({
-  marginTop: '90px',
+  paddingTop: '50px',
   background: 'linear-gradient(to bottom, rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 1))',
   minWidth: '100vw',
-  minHeight: 'calc(100vh - 90px)',
+  minHeight: '100vh',
   [theme.breakpoints.up('md')]: {
     background: 'linear-gradient(to right, rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 1))'
   }
@@ -40,6 +40,8 @@ export const StyledBoxImg = styled(Box)(({ theme }) => ({
   width: '95vw',
   minHeight: 'calc(95vw * 1.4)',
   margin: '0 auto',
+  boxShadow: 'rgba(255, 255, 255, 0.15) 0px 15px 25px, rgba(255, 255, 255, 0.05) 0px 15px 10px',
+  borderRadius: '8px',
   [theme.breakpoints.up('sm')]: {
     width: '70vw',
     minHeight: 'calc(70vw * 1.4)'
