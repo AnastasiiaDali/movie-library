@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import HeroImg from 'images/HeroImg.webp';
+import HeroImgBlack from 'images/HeroImgBlack.webp';
 import { styled } from '@mui/system';
 
-export const AnimatedBox = styled(animated(Box))({
+export const AnimatedBox = styled(animated(Box))(({ theme }) => ({
   position: 'absolute',
   width: '100vw',
   height: '100vh',
@@ -17,8 +17,12 @@ export const AnimatedBox = styled(animated(Box))({
   willChange: 'transform',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
-});
+  justifyContent: 'center',
+  [theme.breakpoints.up('xl')]: {
+    left: '15vw',
+    maxWidth: '1100px'
+  }
+}));
 
 export const StyledContainer = styled(Box)({
   position: 'fixed',
@@ -74,7 +78,7 @@ export default function MainPage() {
   return (
     <StyledContainer
       style={{
-        background: `url(${HeroImg}) center center/cover no-repeat`
+        background: `url(${HeroImgBlack}) center center/cover no-repeat`
       }}>
       {props.map(({ x, y, rot, scale }, i) => (
         <AnimatedBox
@@ -92,7 +96,6 @@ export default function MainPage() {
                 width={{ xs: '100%', md: '60%' }}
                 mb="auto"
                 sx={{
-                  filter: 'grayscale(100%)',
                   background: `url(${dataMainPage[i].image}) center center/cover no-repeat`
                 }}
               />
