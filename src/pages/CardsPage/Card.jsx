@@ -5,9 +5,7 @@ import Button from '@mui/material/Button';
 import { useSpring, animated } from 'react-spring';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
-
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Chip from '@material-ui/core/Chip';
 
 const AnimatedBox = styled(animated(Box))({
   position: 'absolute',
@@ -78,12 +76,6 @@ export default function Card({ show }) {
           <Typography paragraph color="error" variant="h6">
             {show.premiered}
           </Typography>
-          <Chip
-            style={{ position: 'absolute', top: 16, left: 16 }}
-            label={show.language}
-            variant="outlined"
-            color="secondary"
-          />
           <Button
             style={{ position: 'absolute', bottom: 0 }}
             variant="contained"

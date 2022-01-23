@@ -7,24 +7,21 @@ export const dataMainPage = [
     id: '4',
     title: 'Most Popular This week',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum mollis
-    erat in porta. Nunc mi mi, sagittis eu vulputate in, dapibus et leo. Nunc vitae tempus
-    nunc.  `,
+    erat in porta. Nunc mi mi, sagittis eu vulputate in, dapibus et leo. Nunc vitae. `,
     image: avengers
   },
   {
     id: '3',
     title: 'Time to Watch Best Shows',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum mollis
-    erat in porta. Nunc mi mi, sagittis eu vulputate in, dapibus et leo. Nunc vitae tempus
-    nunc.  `,
+    erat in porta. Nunc mi mi, sagittis eu vulputate in, dapibus et leo. Nunc vitae. `,
     image: mostPopularThisWeek
   },
   {
     id: '2',
     title: 'Why you are here...',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum mollis
-    erat in porta. Nunc mi mi, sagittis eu vulputate in, dapibus et leo. Nunc vitae tempus
-    nunc.  `,
+    erat in porta. Nunc mi mi, sagittis eu vulputate in, dapibus et leo. Nunc vitae. `,
     image: bestMovies
   },
   {

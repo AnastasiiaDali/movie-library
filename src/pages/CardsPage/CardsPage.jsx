@@ -39,7 +39,7 @@ export default function CardsPage() {
         width="100vw"
         style={{
           background: `url(${HeroImgBlack}) center center/cover no-repeat`,
-          opacity: '0.2'
+          opacity: '0.3'
         }}></Box>
       <Button
         sx={{ position: 'fixed', top: '16px', left: '16px', zIndex: 10 }}
@@ -49,10 +49,10 @@ export default function CardsPage() {
         Home
       </Button>
       <Box sx={{ padding: '80px 16px 0' }} pt={{ xs: '80px', md: '40px' }}>
-        <Typography variant="h4" textAlign="center" paragraph>
+        <Typography sx={{ fontSize: '1.8rem', fontWeight: 800 }} textAlign="center" paragraph>
           Find Information About All of Your Favorite Shows in One Place
         </Typography>
-        <Typography textAlign="center" variant="h6" paragraph>
+        <Typography textAlign="center" sx={{ fontWeight: 800 }} variant="h6" paragraph>
           Click on she show to learn more
         </Typography>
       </Box>

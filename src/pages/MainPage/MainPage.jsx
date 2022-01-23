@@ -11,9 +11,10 @@ import { styled } from '@mui/system';
 
 export const AnimatedBox = styled(animated(Box))(({ theme }) => ({
   position: 'absolute',
-  width: '100vw',
+  width: '90vw',
   height: '100vh',
   cursor: 'grab',
+  left: '5vw',
   willChange: 'transform',
   display: 'flex',
   alignItems: 'center',
@@ -110,14 +111,14 @@ export default function MainPage() {
                 alignItems="center"
                 justifyContent="center"
                 bgcolor="black">
-                <Typography variant="h3" paragraph>
+                <Typography sx={{ fontSize: '1.7rem' }} paragraph>
                   {dataMainPage[i].title}
                 </Typography>
                 <Typography variant="h4" paragraph>
                   {dataMainPage[i].text}
                 </Typography>
                 <Button
-                  sx={{ fontSize: '20px', marginTop: '16px', padding: '10px 25px' }}
+                  sx={{ fontSize: '20px', marginTop: '8px', padding: '10px 25px' }}
                   variant="contained"
                   component={Link}
                   to={'/shows'}>

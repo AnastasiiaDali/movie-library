@@ -36,7 +36,7 @@ const theme = createTheme({
       lineHeight: 1.4,
       fontWeight: 300,
       [breakPoints.breakpoints.down('sm')]: {
-        fontSize: '1.3rem'
+        fontSize: '1.2rem'
       }
     }
   },
